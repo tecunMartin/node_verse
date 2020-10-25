@@ -1,0 +1,19 @@
+{
+  "name": "platziverser-db",
+  "version": "1.0.0",
+  "description": "A simple IoT Platform - DB module.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecunMartin/node_verse.git"
+  },
+  "author": "tecunMartin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tecunMartin/node_verse/issues"
+  },
+  "homepage": "https://github.com/tecunMartin/node_verse#readme"
+}
