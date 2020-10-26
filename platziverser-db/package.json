@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/tecunMartin/node_verse/issues"
   },
-  "homepage": "https://github.com/tecunMartin/node_verse#readme"
+  "homepage": "https://github.com/tecunMartin/node_verse#readme",
+  "dependencies": {
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.5"
+  }
 }
