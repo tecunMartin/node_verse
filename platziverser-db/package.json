@@ -4,7 +4,8 @@
   "description": "A simple IoT Platform - DB module.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "setup": "SET DEBUG=platziverse:* && node setup.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,10 @@
   },
   "homepage": "https://github.com/tecunMartin/node_verse#readme",
   "dependencies": {
-    "pg": "^8.4.1",
+    "chalk": "^4.1.0",
+    "debug": "^4.2.0",
+    "inquirer": "^7.3.3",
+    "pg": "^8.4.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"
   }
