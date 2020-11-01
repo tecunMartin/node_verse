@@ -1,6 +1,9 @@
 const test = require('ava');
 const proxyquire = require('proxyquire');
 const sinon = require('sinon');
+const agentFixtures = require('../tests/fixtures/agent');
+const chalk = require('chalk');
+const { bgGreen } = require('chalk');
 
 let config = {
   logging: function () {},
@@ -10,6 +13,8 @@ let MetricStub = {
   belongsTo: sinon.spy(),
 };
 
+let single = Object.assign({}, agentFixtures.single);
+let id = 1;
 let AgentStub = null;
 let sanbox = null;
 let db = null;
@@ -40,4 +45,9 @@ test.serial('Setup', (t) => {
   t.true(AgentStub.hasMany.calledWith(MetricStub), 'Argument should be the MetricModel');
   t.true(MetricStub.belongsTo.called, 'MetricModel.belongsTo was executed');
   t.true(MetricStub.belongsTo.calledWith(AgentStub), 'Argumet should be the Agentmodel');
+});
+
+test.serial('Agent#findById', async (t) => {
+  let agent = await db.Agent.findById(id);
+  t.deepEqual(agent, agentFixtures.byId(id), 'Should be the same');
 });
