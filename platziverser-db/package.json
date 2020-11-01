@@ -4,7 +4,7 @@
   "description": "A simple IoT Platform - DB module.",
   "main": "index.js",
   "scripts": {
-    "test": "SET DEBUG=platziverse:* && ava tests/* --verbose",
+    "test": "SET DEBUG=platziverse:* && nyc --reporter=lcov ava tests/* --verbose",
     "lint": "standard",
     "setup": "SET DEBUG=platziverse:* && node setup.js"
   },
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "ava": "^3.13.0",
+    "nyc": "^15.1.0",
     "sqlite3": "^5.0.0"
   }
 }
