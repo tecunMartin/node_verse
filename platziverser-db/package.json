@@ -4,6 +4,7 @@
   "description": "A simple IoT Platform - DB module.",
   "main": "index.js",
   "scripts": {
+    "test": "SET DEBUG=platziverse:* && ava tests/* --verbose",
     "lint": "standard",
     "setup": "SET DEBUG=platziverse:* && node setup.js"
   },
@@ -20,9 +21,14 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "debug": "^4.2.0",
+    "defaults": "^1.0.3",
     "inquirer": "^7.3.3",
     "pg": "^8.4.2",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "ava": "^3.13.0",
+    "sqlite3": "^5.0.0"
   }
 }
