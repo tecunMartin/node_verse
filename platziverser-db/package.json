@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "SET DEBUG=platziverse:* && nyc --reporter=lcov ava tests/* --verbose",
-    "lint": "standard",
-    "setup": "SET DEBUG=platziverse:* && node setup.js"
+    "setup": "SET DEBUG=platziverse:* && node setup.js",
+    "lint": "standard"
   },
   "repository": {
     "type": "git",
