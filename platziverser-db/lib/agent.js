@@ -23,8 +23,39 @@ module.exports = function setupAgent(AgentModel) {
     return result.toJSON();
   }
 
+  function findByUui(uuid) {
+    return AgentModel.findOne({
+      where: {
+        uuid,
+      },
+    });
+  }
+
+  function findAll() {
+    return AgentModel.findAll();
+  }
+
+  function findConnected() {
+    return AgentModel.findAll({
+      where: {
+        connected: true,
+      },
+    });
+  }
+
+  function findByUsername(username) {
+    return AgentModel.findAll({
+      username,
+      connected: true,
+    });
+  }
+
   return {
     findById,
     createOrUpdate,
+    findByUui,
+    findAll,
+    findConnected,
+    findByUsername,
   };
 };
