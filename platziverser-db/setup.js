@@ -12,6 +12,7 @@ async function setUp() {
     name: 'setup',
     message: 'This will destry your database, are you sure?',
   });
+
   if (!answer.setup) {
     return console.log('Nothing happened :)');
   }

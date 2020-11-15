@@ -1,7 +1,6 @@
 const test = require('ava');
 const proxyquire = require('proxyquire');
 const sinon = require('sinon');
-const Sandbox = require('sinon/lib/sinon/sandbox');
 const agentFixtures = require('../tests/fixtures/agent');
 
 let config = {
@@ -92,7 +91,6 @@ test.afterEach(() => {
 
 // Prueba para saber si el agente Existe.
 test('Agent', (t) => {
-  console.log(db);
   t.truthy(db.Agent, 'Agent service should exits');
 });
 
